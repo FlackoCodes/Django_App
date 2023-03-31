@@ -13,6 +13,6 @@ data_base = mysql.connector.connect(
 # prepare a cursor object
 cursor_object = data_base.cursor()
 
-# create the database
+# create the database .
 cursor_object.execute("CREATE DATABASE Flackodatabase")
 

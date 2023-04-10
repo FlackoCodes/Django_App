@@ -59,5 +59,5 @@ Users can update existing customer records by clicking the "Edit" button next to
 Delete Records
 Users can delete existing customer records by clicking the "Delete" button next to the record they want to delete.
 
-Contributing
+Contributing.
 This project is open for contributions. If you find any bugs or want to add new features, feel free to create a pull request or submit an issue.

@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3">
+    <h3>Welcome {{ customer_record.first_name }}</h3><br>
+       <div class="card" style="width: 18rem; text-align:center;">
+  <div class="card-header">
+    Customer Details
+  </div>
+  <ul class="list-group list-group-flush">
+
+      <li class="list-group-item"><strong>Name: </strong>{{ customer_record.first_name }} {{ customer_record.last_name}}</li>
+    <li class="list-group-item"><strong>Email: </strong>{{ customer_record.email }}</li>
+    <li class="list-group-item"><strong>Phone: </strong>{{ customer_record.phone }}</li>
+    <li class="list-group-item"><strong>Country: </strong>{{ customer_record.country }}</li>
+    <li class="list-group-item"><strong>Zip Code: </strong>{{ customer_record.zip_code }}</li>
+    <li class="list-group-item"><strong>City: </strong>{{ customer_record.city }}</li>
+    <li class="list-group-item"><strong>Created On: </strong>{{ customer_record.created_at }}</li>
+  </ul>
+</div>
+    <br>
+<a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Back</a>
+<a href="{% url 'delete' customer_record.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'update-records' customer_record.id %}" class="btn btn-primary">Update Record</a>
+
+        {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{ message }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

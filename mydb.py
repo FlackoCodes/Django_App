@@ -5,8 +5,7 @@ import mysql.connector
 data_base = mysql.connector.connect(
     host = 'localhost',
     user = 'root',
-    passwd = '****************',
-    auth_plugin = '************',
+    passwd = '@prettyflacko2k2',
 
 )
 
